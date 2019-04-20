@@ -32,7 +32,7 @@ if (empty($_POST["message"])) {
 }
 
 
-$EmailTo = "email@gmail.com";
+$EmailTo = "contact@light-up.vn";
 $Subject = "New Message Received";
 
 // prepare email body text
@@ -54,10 +54,10 @@ $Body .= "\n";
 $success = mail($EmailTo, $Subject, $Body, "From:".$email);
 
 // redirect to success page
-if ($success && $errorMSG == ""){
+if ($success && $errorMSG == "") {
    echo "success";
-}else{
-    if($errorMSG == ""){
+} else {
+    if ($errorMSG == "") {
         echo "Something went wrong :(";
     } else {
         echo $errorMSG;
