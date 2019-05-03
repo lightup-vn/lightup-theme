@@ -31,7 +31,7 @@ if (empty($_POST["message"])) {
 }
 
 $EmailTo = "contact@light-up.vn";
-$Subject = "New Message Received";
+$Subject = $msg_subject;
 
 // prepare email body text
 $Body = "";
@@ -40,9 +40,6 @@ $Body .= $name;
 $Body .= "\n";
 $Body .= "Email: ";
 $Body .= $email;
-$Body .= "\n";
-$Body .= "Subject: ";
-$Body .= $msg_subject;
 $Body .= "\n";
 $Body .= "Message: ";
 $Body .= $message;
